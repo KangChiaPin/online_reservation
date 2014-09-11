@@ -28,6 +28,9 @@ function makeApiCall
 
 	resp <-! request.execute
 	$ \#name .text resp.summary
+
+  console.log resp
+
 	for i from 0 to resp.items.length
 		li = document.createElement \li
 		li.appendChild document.createTextNode resp.items[i].start.date + " " + resp.items[i].summary
