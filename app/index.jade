@@ -1,0 +1,23 @@
+doctype html5
+html
+  head
+    meta(charset='utf-8')
+    title Title
+    link(href='bootstrap/css/bootstrap.css', rel='stylesheet')
+    link(href='index.css', rel='stylesheet')
+    script(src='jquery-1.11.0.js')
+    script(src='bootstrap/js/bootstrap.js')
+    script(src='index.js')
+    script(src='https://apis.google.com/js/client.js?onload=handleClientLoad')
+  body
+    .container
+      .row
+        .span9 
+          .cal
+            #content
+            h3
+              span#name
+            #events
+        .span3.sidebar
+          button#authorize-button Authorize
+// vi:et:ft=ls:nowrap:sw=2:ts=2
