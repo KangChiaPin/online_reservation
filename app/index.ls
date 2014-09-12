@@ -23,15 +23,15 @@ function handleAuthClick event
 	return false
 
 function makeApiCall
-	gapi.client.load \calendar, \v3 !->
-	request = gapi.client.calendar.events.list \calendarId : \billy5521@gmail.com
+  gapi.client.load \calendar, \v3 !->
+  request = gapi.client.calendar.events.list \calendarId : \billy5521@gmail.com
 
   resp <-! request.execute
- 	$ \#name .text resp.summary
+  $ \#name .text resp.summary
 
   console.log resp
 
-	for i from 0 to resp.items.length
+  for i from 0 to resp.items.length
     li = document.createElement \li
     li.appendChild document.createTextNode resp.items[i].start.date + " " + resp.items[i].summary
     document.getElementById \events .appendChild li
