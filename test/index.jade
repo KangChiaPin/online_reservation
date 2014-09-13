@@ -1,0 +1,34 @@
+doctype html5
+html
+  head
+    meta(charset='utf-8')
+    title Title
+    link(href='../public/bootstrap/css/bootstrap.css', rel='stylesheet')
+    link(href='../public/index.css', rel='stylesheet')
+    link(href='fullcalendar/fullcalendar.css', rel='stylesheet')
+    script(src='jquery-1.11.0.js')
+    script(src='../public/bootstrap/js/bootstrap.js')
+    script(src='index.js')
+    script(src='moment.js')
+    script(src='fullcalendar/fullcalendar.js')
+    script(src='fullcalendar/gcal.js')
+    script(src='https://apis.google.com/js/client.js?onload=handleClientLoad')
+  body
+    .container
+      .row
+        .span9
+          #calendar
+        .span3
+          button#authorize-button authorize
+          #content
+          h3
+          span#title events from google
+          #sourceEvents
+          button#hideSource hide 
+          br
+          span#title events you add
+          #externalEvents
+          button#hideExternal hide
+          br
+          button#submit submit
+// vi:et:ft=ls:nowrap:sw=2:ts=2
